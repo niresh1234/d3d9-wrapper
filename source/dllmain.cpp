@@ -1022,7 +1022,7 @@ bool WINAPI DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
                 bForceWindowedMode = GetPrivateProfileInt("MAIN", "ForceWindowedMode", 0, path) != 0;
                 fFPSLimit = static_cast<float>(GetPrivateProfileInt("MAIN", "FPSLimit", 0, path));
                 nFullScreenRefreshRateInHz = GetPrivateProfileInt("MAIN", "FullScreenRefreshRateInHz", 0, path);
-                bDisplayFPSCounter = GetPrivateProfileInt("MAIN", "DisplayFPSCounter", 0, path);
+                bDisplayFPSCounter = GetPrivateProfileInt("MAIN", "DisplayFPSCounter", 1, path) != 0;
                 bEnableHooks = GetPrivateProfileInt("MAIN", "EnableHooks", 0, path);
                 bUsePrimaryMonitor = GetPrivateProfileInt("FORCEWINDOWED", "UsePrimaryMonitor", 0, path) != 0;
                 bCenterWindow = GetPrivateProfileInt("FORCEWINDOWED", "CenterWindow", 1, path) != 0;
